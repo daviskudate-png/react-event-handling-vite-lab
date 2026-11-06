@@ -57,3 +57,56 @@ You are working with a client to create a new password input within their websit
 - **GitHub Repository:** [React Event Handling Vite Lab](https://github.com/learn-co-curriculum/react-event-handling-vite-lab)
 - **Event Handling in React:** [React Documentation](https://react.dev/learn/responding-to-events#adding-event-handlers)
 
+#How to run the project
+1.Run npm install
+2.Run npm dev
+3.Open the local host-http://localhost:5173
+4.Open the browser console and hover over the button or type in the input
+
+
+
+
+// SubmitButton component: renders a button that logs messages
+// when the mouse enters or leaves it.
+
+function SubmitButton() {
+  // Runs when the mouse pointer moves onto the button (onMouseEnter event)
+  function handleEnter() {
+    console.log("Mouse Entering");
+  }
+
+  // Runs when the mouse pointer moves off the button (onMouseLeave event)
+  function handleLeave() {
+    console.log("Mouse Exiting");
+  }
+
+  return (
+    // Each handler is passed to its event prop without parentheses,
+    // so React calls it only when the event happens.
+    <button onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+      Submit Password
+    </button>
+  );
+}
+
+export default SubmitButton;
+
+
+//passwordinput
+// PasswordInput component: renders a password field that logs
+// a message every time the user types in it.
+
+function PasswordInput() {
+  // Runs on every change to the input value (onChange event)
+  function handleChange() {
+    console.log("Entering password...");
+  }
+
+  return (
+    // type="password" hides the characters as they are typed.
+    // handleChange is passed without parentheses so it runs only on the event.
+    <input type="password" onChange={handleChange} />
+  );
+}
+
+export default PasswordInput;
