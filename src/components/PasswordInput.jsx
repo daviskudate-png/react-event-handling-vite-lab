@@ -5,7 +5,7 @@ function PasswordInput (){
         console.log("Entering password...");
     }
     return(
-        < input 
+        <input 
         type="password"
         placeholder="Enter your password"
         onChange={handleChange}

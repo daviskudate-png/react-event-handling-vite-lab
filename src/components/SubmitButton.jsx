@@ -12,7 +12,7 @@ function SubmitButton (){
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
         >
-            submit password
+            Submit Password
             </button>
     );
 }
